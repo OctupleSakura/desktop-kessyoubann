@@ -6,7 +6,11 @@ declare const loadlive2d: any
 const App: React.FC = () => {
   
   useEffect(() => {
-    loadlive2d("live2d", '/model/model.json')
+    try {
+      loadlive2d("live2d", './model/model.json')
+    } catch (e) {
+      alert(e)
+    }
   }, [])
 
   return (
