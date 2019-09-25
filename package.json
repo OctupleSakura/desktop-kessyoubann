@@ -5,12 +5,15 @@
   "private": true,
   "main": "public/electron.js",
   "dependencies": {
+    "@material-ui/core": "^4.4.2",
+    "@material-ui/icons": "^4.4.1",
     "@types/jest": "24.0.18",
     "@types/node": "12.7.5",
     "@types/react": "16.9.2",
     "@types/react-dom": "16.9.0",
     "cross-env": "^6.0.0",
     "electron-is-dev": "^1.1.0",
+    "node-sass": "^4.12.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1",
@@ -41,7 +44,7 @@
       "last 1 safari version"
     ]
   },
-  "build": { 
+  "build": {
     "files": [
       "*.js",
       "build",
@@ -49,10 +52,10 @@
     ],
     "directories": {
       "output": "dist"
-    }, 
-    "win": {  
+    },
+    "win": {
       "icon": "./build/desktop.ico"
-    }  
+    }
   },
   "devDependencies": {
     "concurrently": "^4.1.2",
