@@ -1,25 +1,24 @@
-import React, { useEffect } from 'react'
+import React, { useState } from 'react'
 import './App.css'
 
-declare const loadlive2d: any
+import { Character } from './components/character'
+import { Drag } from './components/drag'
 
 const App: React.FC = () => {
-  
-  useEffect(() => {
-    try {
-      loadlive2d("live2d", './model/model.json')
-    } catch (e) {
-      alert(e)
-    }
-  }, [])
+
+  const [drag, setDrag] = useState(false)
 
   return (
-    <div className="App">
-      <div className="waifu-tips"></div>
-      <canvas id="live2d" width="280" height="250"></canvas>
+    <div 
+      className="App"
+      onMouseEnter={() => setDrag(true)}
+      onMouseLeave={() => setDrag(false)}
+    >
+      <Character></Character>
+      <Drag></Drag>
     </div>
   )
 
 }
 
-export default App;
+export default App
