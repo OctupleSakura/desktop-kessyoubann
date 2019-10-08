@@ -6,16 +6,16 @@ import { Drag } from './components/drag'
 
 const App: React.FC = () => {
 
-  const [drag, setDrag] = useState(false)
+  const [dragShow, setShowDrag] = useState(false)
 
   return (
     <div 
       className="App"
-      onMouseEnter={() => setDrag(true)}
-      onMouseLeave={() => setDrag(false)}
+      onMouseEnter={() => setShowDrag(true)}
+      onMouseLeave={() => setShowDrag(false)}
     >
       <Character></Character>
-      <Drag></Drag>
+      { dragShow && <Drag></Drag> }
     </div>
   )
 
