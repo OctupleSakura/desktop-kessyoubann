@@ -16,8 +16,8 @@ let appTray = null
 function createWindow() {
 
   mainWindow = new BrowserWindow({ // 创建窗体
-    width: 350, 
-    height: 380,
+    width: 300, 
+    height: 270,
     frame: false,
     hasShadow: false,
     resizable: false,
